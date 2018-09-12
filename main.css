@@ -1,3 +1,33 @@
 body {
     background-color: wheat;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper {
+    flex: 1 0 auto;    
+}
+.main_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.main_nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.main_nav li {
+    list-style: none;
+}
+.list_item a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background-color: tomato;
+    margin:10px;
+    border-radius: 5px;
+}
+.list_item :hover {
+    background-color: lightcoral;
 }
