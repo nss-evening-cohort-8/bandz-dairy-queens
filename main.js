@@ -15,7 +15,7 @@ const songData = [
     songThree: 'Ricottanother thing coming',
     songFour: "It's too Gouda to be true",
     songFive: 'You Feta believe it' }, 
-    {albumName: 'Cows go moo',
+    {albumName: 'Cows go Moo',
     songOne: 'I moo, therefore I am',
     songTwo: 'Stinky fromage',
     songThree: 'Udderly delicious',
