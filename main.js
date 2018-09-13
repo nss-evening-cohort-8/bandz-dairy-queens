@@ -1,3 +1,4 @@
+// Image sliding begins
 const images = [
     "images/groupImg.jpg",
     "images/jw-image.jpg",
@@ -13,11 +14,20 @@ const printToDom = (stringToPrint, divId) => {
 }
 
 const imagesStringBuilder =() => {
-    let newString = ' ';
+   
 	for (i=0; i < images.length; i++){
-        newString += `<img src="${images[i]}" width="500px">`;
-    };
-    printToDom(newString, 'image_container');
+         let newString = `<img src="${images[i]}" width="1000px">`;
+         if(i < images.length){
+            i++;
+        }else {
+            i = 0;
+        }
+        let counter = 0;
+    setTimeout(() => {
+        counter++;
+        printToDom(newString, 'image_container')}, 3000); 
 }
-
+}
 imagesStringBuilder();
+
+// image sliding ends
