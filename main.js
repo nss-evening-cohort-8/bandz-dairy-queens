@@ -33,7 +33,7 @@ const songLoop = () => {
     let stringBuilder = '';
     for (i = 0; i < songData.length; i++) {
     stringBuilder += `<div class='albumSongs'>`; 
-    stringBuilder += `<h1>${songData[i].albumName}</h1>`;
+    stringBuilder += `<h2>${songData[i].albumName}</h2>`;
     stringBuilder += `<p>${songData[i].songOne}</p>`
     stringBuilder += `<p>${songData[i].songTwo}</p>`
     stringBuilder += `<p>${songData[i].songThree}</p>`
