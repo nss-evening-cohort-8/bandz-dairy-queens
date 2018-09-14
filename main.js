@@ -78,14 +78,14 @@ const songLoop = () => {
     stringBuilder += `<div class='albumSongs'>`; 
     stringBuilder += `<h2>${songData[i].albumName}</h2>`;
     stringBuilder += `<img class='songImage' src="${songData[i].image}">`;
-    stringBuilder += `<p>1. ${songData[i].songOne}</p>`;
+    stringBuilder += `<p class='songName'>1. ${songData[i].songOne}</p>`;
     stringBuilder += `<audio controls>`;
     stringBuilder += `<source src="../soundFiles/${songData[i].soundFile}" type="audio/wav">`;
     stringBuilder += `</audio>`;
-    stringBuilder += `<p>2. ${songData[i].songTwo}</p>`;
-    stringBuilder += `<p>3. ${songData[i].songThree}</p>`;
-    stringBuilder += `<p>4. ${songData[i].songFour}</p>`;
-    stringBuilder += `<p>5. ${songData[i].songFive}</p>`;
+    stringBuilder += `<p class='songName'>2. ${songData[i].songTwo}</p>`;
+    stringBuilder += `<p class='songName'>3. ${songData[i].songThree}</p>`;
+    stringBuilder += `<p class='songName'>4. ${songData[i].songFour}</p>`;
+    stringBuilder += `<p class='songName'>5. ${songData[i].songFive}</p>`;
     stringBuilder += `</div>`;
     };
     printToDom(stringBuilder, 'allSongs')
