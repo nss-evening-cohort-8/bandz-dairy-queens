@@ -42,8 +42,9 @@ const dairyQueens= [
 const songData = [
     {
     albumName: 'Bring the Cheese',
+    image: '../images/theCheese.jpg',
     soundFile: 'not sure',
-    songOne: "It's too Gouda to be true",
+    songOne: "It's too Gouda be true",
     songTwo: 'Munster Mash',
     songThree: 'Ricottanother thing coming',
     songFour: 'Born to Brie wild',
@@ -51,6 +52,7 @@ const songData = [
     }, 
     {
     albumName: 'Cows go Moo',
+    image: '../images/cows.jpg',
     soundFile: 'CowSound.wav',
     songOne: 'I moo, therefore I am',
     songTwo: 'Stinky fromage',
@@ -60,12 +62,13 @@ const songData = [
     },
     {
     albumName: 'Treat Your Beats',
+    image: '../images/treatyourbeat.jpg',
     soundFile: 'not sure',
-    songOne: 'Sundae school',
-    songTwo: 'Lick me till ice cream',
+    songOne: 'Lick me till ice cream',
+    songTwo: 'Sundae School',
     songThree: 'Not pudding up with it',
     songFour: "Don't break my cheesecake",
-    songFive: 'Whip my Cream' 
+    songFive: 'Whip my cream' 
     }
 ];
 
@@ -74,15 +77,17 @@ const songLoop = () => {
     for (i = 0; i < songData.length; i++) {
     stringBuilder += `<div class='albumSongs'>`; 
     stringBuilder += `<h2>${songData[i].albumName}</h2>`;
-    stringBuilder += `<p>${songData[i].songOne}</p>`
-    stringBuilder += `<audio controls>`
-    stringBuilder += `<source src="../soundFiles/${songData[i].soundFile}" type="audio/wav">`
-    stringBuilder += `</audio>`
-    stringBuilder += `<p>${songData[i].songTwo}</p>`
-    stringBuilder += `<p>${songData[i].songThree}</p>`
-    stringBuilder += `<p>${songData[i].songFour}</p>`
-    stringBuilder += `<p>${songData[i].songFive}</p>`
-    stringBuilder += `</div>`
+    stringBuilder += `<img class='songImage' src="${songData[i].image}">`;
+    stringBuilder += `<p>1. ${songData[i].songOne}</p>`;
+    stringBuilder += `<audio controls>`;
+    stringBuilder += `<p>Sample: </p>`
+    stringBuilder += `<source src="../soundFiles/${songData[i].soundFile}" type="audio/wav">`;
+    stringBuilder += `</audio>`;
+    stringBuilder += `<p>2. ${songData[i].songTwo}</p>`;
+    stringBuilder += `<p>3. ${songData[i].songThree}</p>`;
+    stringBuilder += `<p>4. ${songData[i].songFour}</p>`;
+    stringBuilder += `<p>5. ${songData[i].songFive}</p>`;
+    stringBuilder += `</div>`;
     };
     printToDom(stringBuilder, 'allSongs')
 };
