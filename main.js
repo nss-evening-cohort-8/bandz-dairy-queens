@@ -40,24 +40,33 @@ const dairyQueens= [
 //Song Page Start
 
 const songData = [
-    {albumName: 'Bring the Cheese',
-    songOne: 'Born to Brie wild',
+    {
+    albumName: 'Bring the Cheese',
+    soundFile: 'not sure',
+    songOne: "It's too Gouda to be true",
     songTwo: 'Munster Mash',
     songThree: 'Ricottanother thing coming',
-    songFour: "It's too Gouda to be true",
-    songFive: 'You Feta believe it' }, 
-    {albumName: 'Cows go Moo',
+    songFour: 'Born to Brie wild',
+    songFive: 'You Feta believe it' 
+    }, 
+    {
+    albumName: 'Cows go Moo',
+    soundFile: 'CowSound.wav',
     songOne: 'I moo, therefore I am',
     songTwo: 'Stinky fromage',
     songThree: 'Udderly delicious',
     songFour: 'Churn dat butta',
-    songFive: 'Thanks a latte' },
-    {albumName: 'Treat Your Beats',
-    songOne: 'Lick me till ice cream',
-    songTwo: 'Sundae school',
+    songFive: 'Thanks a latte' 
+    },
+    {
+    albumName: 'Treat Your Beats',
+    soundFile: 'not sure',
+    songOne: 'Sundae school',
+    songTwo: 'Lick me till ice cream',
     songThree: 'Not pudding up with it',
     songFour: "Don't break my cheesecake",
-    songFive: 'Whip my Cream' }
+    songFive: 'Whip my Cream' 
+    }
 ];
 
 const songLoop = () => {
@@ -66,6 +75,9 @@ const songLoop = () => {
     stringBuilder += `<div class='albumSongs'>`; 
     stringBuilder += `<h2>${songData[i].albumName}</h2>`;
     stringBuilder += `<p>${songData[i].songOne}</p>`
+    stringBuilder += `<audio controls>`
+    stringBuilder += `<source src="../soundFiles/${songData[i].soundFile}" type="audio/wav">`
+    stringBuilder += `</audio>`
     stringBuilder += `<p>${songData[i].songTwo}</p>`
     stringBuilder += `<p>${songData[i].songThree}</p>`
     stringBuilder += `<p>${songData[i].songFour}</p>`
