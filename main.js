@@ -1,4 +1,5 @@
 // Image sliding begins
+
 const images = [
     "images/groupImg.jpg",
     "images/jw-image.jpg",
@@ -9,6 +10,7 @@ const images = [
 ];
 
 // function for Print To DOM
+
 const printToDom = (stringToPrint, divId) => {
     const selectedDiv = document.getElementById(divId);
     if (selectedDiv!==null){
@@ -81,24 +83,36 @@ bandMemberStringBuilder();
 //Song Page Start
 
 const songData = [
-    {albumName: 'Bring the Cheese',
-    songOne: 'Born to Brie wild',
+    {
+    albumName: 'Bring the Cheese',
+    image: '../images/theCheese.jpg',
+    soundFile: 'mandolin.mp3',
+    songOne: "It's too Gouda be true",
     songTwo: 'Munster Mash',
     songThree: 'Ricottanother thing coming',
-    songFour: "It's too Gouda to be true",
-    songFive: 'You Feta believe it' }, 
-    {albumName: 'Cows go Moo',
+    songFour: 'Born to Brie wild',
+    songFive: 'You Feta believe it' 
+    }, 
+    {
+    albumName: 'Cows go Moo',
+    image: '../images/cows.jpg',
+    soundFile: 'strummin.mp3',
     songOne: 'I moo, therefore I am',
-    songTwo: 'Stinky fromage',
+    songTwo: 'Fresh from the teet',
     songThree: 'Udderly delicious',
     songFour: 'Churn dat butta',
-    songFive: 'Thanks a latte' },
-    {albumName: 'Treat Your Beats',
+    songFive: 'Thanks a latte' 
+    },
+    {
+    albumName: 'Treat Your Beats',
+    image: '../images/treatyourbeat.jpg',
+    soundFile: 'theEntertainer.mp3',
     songOne: 'Lick me till ice cream',
-    songTwo: 'Sundae school',
+    songTwo: 'Sundae School',
     songThree: 'Not pudding up with it',
     songFour: "Don't break my cheesecake",
-    songFive: 'Whip my Cream' }
+    songFive: 'Whip my cream' 
+    }
 ];
 
 const songLoop = () => {
@@ -106,12 +120,16 @@ const songLoop = () => {
     for (i = 0; i < songData.length; i++) {
     stringBuilder += `<div class='albumSongs'>`; 
     stringBuilder += `<h2>${songData[i].albumName}</h2>`;
-    stringBuilder += `<p>${songData[i].songOne}</p>`
-    stringBuilder += `<p>${songData[i].songTwo}</p>`
-    stringBuilder += `<p>${songData[i].songThree}</p>`
-    stringBuilder += `<p>${songData[i].songFour}</p>`
-    stringBuilder += `<p>${songData[i].songFive}</p>`
-    stringBuilder += `</div>`
+    stringBuilder += `<img class='songImage' src="${songData[i].image}">`;
+    stringBuilder += `<p class='songName'>1. ${songData[i].songOne}</p>`;
+    stringBuilder += `<audio controls>`;
+    stringBuilder += `<source src="../soundFiles/${songData[i].soundFile}" type="audio/mpeg">`;
+    stringBuilder += `</audio>`;
+    stringBuilder += `<p class='songName'>2. ${songData[i].songTwo}</p>`;
+    stringBuilder += `<p class='songName'>3. ${songData[i].songThree}</p>`;
+    stringBuilder += `<p class='songName'>4. ${songData[i].songFour}</p>`;
+    stringBuilder += `<p class='songName'>5. ${songData[i].songFive}</p>`;
+    stringBuilder += `</div>`;
     };
     printToDom(stringBuilder, 'allSongs')
 };
