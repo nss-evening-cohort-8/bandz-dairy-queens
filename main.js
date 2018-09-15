@@ -43,7 +43,7 @@ const songData = [
     {
     albumName: 'Bring the Cheese',
     image: '../images/theCheese.jpg',
-    soundFile: 'not sure',
+    soundFile: 'mandolin.mp3',
     songOne: "It's too Gouda be true",
     songTwo: 'Munster Mash',
     songThree: 'Ricottanother thing coming',
@@ -53,7 +53,7 @@ const songData = [
     {
     albumName: 'Cows go Moo',
     image: '../images/cows.jpg',
-    soundFile: 'CowSound.wav',
+    soundFile: 'strummin.mp3',
     songOne: 'I moo, therefore I am',
     songTwo: 'Stinky fromage',
     songThree: 'Udderly delicious',
@@ -63,7 +63,7 @@ const songData = [
     {
     albumName: 'Treat Your Beats',
     image: '../images/treatyourbeat.jpg',
-    soundFile: 'not sure',
+    soundFile: 'theEntertainer.mp3',
     songOne: 'Lick me till ice cream',
     songTwo: 'Sundae School',
     songThree: 'Not pudding up with it',
@@ -80,7 +80,7 @@ const songLoop = () => {
     stringBuilder += `<img class='songImage' src="${songData[i].image}">`;
     stringBuilder += `<p class='songName'>1. ${songData[i].songOne}</p>`;
     stringBuilder += `<audio controls>`;
-    stringBuilder += `<source src="../soundFiles/${songData[i].soundFile}" type="audio/wav">`;
+    stringBuilder += `<source src="../soundFiles/${songData[i].soundFile}" type="audio/mpeg">`;
     stringBuilder += `</audio>`;
     stringBuilder += `<p class='songName'>2. ${songData[i].songTwo}</p>`;
     stringBuilder += `<p class='songName'>3. ${songData[i].songThree}</p>`;
