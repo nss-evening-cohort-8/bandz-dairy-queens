@@ -1,3 +1,9 @@
+// function for Print To DOM
+const printToDom = (stringToPrint, divId) => {
+    const selectedDiv = document.getElementById(divId);
+    selectedDiv.innerHTML = stringToPrint; 
+}
+
 // Image sliding begins
 const images = [
     "images/groupImg.jpg",
@@ -7,11 +13,7 @@ const images = [
     "images/mw-image.jpg",
     "images/rp-image1.jpg"
 ];
-// function for Print To DOM
-const printToDom = (stringToPrint, divId) => {
-    const selectedDiv = document.getElementById(divId);
-    selectedDiv.innerHTML = stringToPrint; 
-}
+
 //   function to slide Images
 const slideMyImages= (i) => {
      setTimeout(()=> {    
@@ -102,8 +104,6 @@ const songLoop = () => {
 songLoop();
 
 //Song Page End
-
-
 
 //Event Page Begin
 const tourSched  = {
