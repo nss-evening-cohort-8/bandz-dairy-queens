@@ -121,8 +121,7 @@ songLoop();
 //Song Page End
 
 //Event Page Begin
-const tourSched  = {
-    tourPlaces: [
+const tourPlaces = [
 {
     imageURL: "Photo goes here",
     locationName: "St. James Cheese Company",
@@ -163,21 +162,20 @@ const tourSched  = {
     description: "You're in for a real treat here at Widmer's Cheese Cellars. Plan on getting to the show before we begin! You'll be able to tour the Cheese Cellar, seeing first hand how the cheese is made in the factory store and viewing area. It opens at 7am and closes just in time for us to begin. Eat some good cheese and then come rock out! Parking will be a bit tricky because Theresa is a small town. There will be special parking available for concert and cheese goers. Follow the signs and volunteers will point you in the correct direction. Parking will be free.",  
     websiteURL: "https://www.widmerscheese.com/factory-tour/" 
 }
-]
-};
+];
 
 const tourStringBuilder = () => {
   let newString = '';
-  for (let i = 0; i < tourSched.tourPlaces.length; i++){
+  for (let i = 0; i < tourPlaces.length; i++){
       newString += `<div class = "tours">`;
-      newString += `<h5>${tourSched.tourPlaces[i].imageURL}</h5>`;
-      newString += `<h5>${tourSched.tourPlaces[i].locationName}</h5>`;
-      newString += `<h5>${tourSched.tourPlaces[i].address}</h5>`;
-      newString += `<h5>${tourSched.tourPlaces[i].date}</h5>`;
-      newString += `<h5>${tourSched.tourPlaces[i].time}</h5>`;
-      newString += `<h5>${tourSched.tourPlaces[i].ticketPrice}</h3>`;
-      newString += `<h5>${tourSched.tourPlaces[i].description}</h5>`;
-      newString += `<h5>${tourSched.tourPlaces[i].websiteURL}</h5>`;
+      newString += `<h5>${tourPlaces[i].imageURL}</h5>`;
+      newString += `<h5>${tourPlaces[i].locationName}</h5>`;
+      newString += `<h5>${tourPlaces[i].address}</h5>`;
+      newString += `<h5>${tourPlaces[i].date}</h5>`;
+      newString += `<h5>${tourPlaces[i].time}</h5>`;
+      newString += `<h5>${tourPlaces[i].ticketPrice}</h3>`;
+      newString += `<h5>${tourPlaces[i].description}</h5>`;
+      newString += `<h5>${tourPlaces[i].websiteURL}</h5>`;
       newString += `</div>`;
   }
   printToDom(newString, 'tourEvents');
