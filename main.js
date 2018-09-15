@@ -1,12 +1,3 @@
-//Print To Dom function
-
-const printToDom = (stringToPrint,divId) => {
-    const selectedDiv = document.getElementById(divId);
-    if (selectedDiv!==null){
-        selectedDiv.innerHTML = stringToPrint; 
-    }
-}
-
 // Image sliding begins
 
 const images = [
@@ -19,6 +10,7 @@ const images = [
 ];
 
 // function for Print To DOM
+
 const printToDom = (stringToPrint, divId) => {
     const selectedDiv = document.getElementById(divId);
     if (selectedDiv!==null){
