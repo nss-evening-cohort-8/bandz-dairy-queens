@@ -47,6 +47,7 @@ const bandMemberStringBuilder = () => {
     }
     printToDom(newString, 'dairyQueens');
 }
+bandMemberStringBuilder();
 // Band Member Page End
 
 //Song Page Start
