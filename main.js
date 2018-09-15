@@ -124,42 +124,42 @@ songLoop();
 const tourPlaces = [
 {
     cheeseImage: "../images/StJames.jpg",
-    locationName: "St. James Cheese Company",
-    address: "Warehouse District 641 Tchoupitoulas New Orleans",
-    date: "October 31st 2019",
-    time: "5:00pm - 10:00pm",
-    ticketPrice: "$100 up to $3,000",
-    directionURL: "https://www.google.com/search?rlz=1C1CHBF_enUS811US811&q=st+james+cheese&npsic=0&rflfq=1&rlha=0&rllag=29935619,-90088332,2351&tbm=lcl&ved=2ahUKEwj93c2dqb3dAhWVPH0KHS6yDFoQtgN6BAgBEAQ&tbs=lrf:!2m1!1e3!2m1!1e16!3sIAE,lf:1,lf_ui:4&rldoc=1#rlfi=hd:;si:;mv:!3m12!1m3!1d12065.31575774894!2d-90.08833235!3d29.9356195!2m3!1f0!2f0!3f0!3m2!1i543!2i335!4f13.1",
-    websiteURL: "https://stjamescheese.com/"
+    locationName: "Location: St. James Cheese Company",
+    address: "Address: Warehouse District 641 Tchoupitoulas New Orleans",
+    date: "Date: October 31st 2019",
+    time: "Time: 5:00pm - 10:00pm",
+    ticketPrice: "Ticket Pricing: $100 up to $3,000",
+    albumPlaying: "Playing the albums: Bring the Cheese, Cows Go Moo and Treat Your Beats",
+    websiteURL: "https://www.stjamescheese.com/"
 },
 {
-    cheeseImage: "../images/StJames.jpg",
-    locationName: "St. Tola Goat Farm",
-    address: "Gortbofearna, Maurice Mills, Ennistymon, Co. Clare, Ireland V95 XA9C",
-    date: "November 13th 2019",
-    time: "4:30pm - 8:30pm",
-    ticketPrice: "$250 up to $3,000",
-    directionURL: "",
-    websiteURL: "www.st-tola.ie"
+    cheeseImage: "../images/StTola.jpg",
+    locationName: "Location: St. Tola Goat Farm",
+    address: "Address: Gortbofearna, Maurice Mills, Ennistymon, Co. Clare, Ireland V95 XA9C",
+    date: "Date: November 13th 2019",
+    time: "Time: 4:30pm - 8:30pm",
+    ticketPrice: "Ticket Pricing: $250 up to $3,000",
+    albumPlaying: "Playing the album: Bring the Cheese and a few other original or improv songs",
+    websiteURL: "https://www.st-tola.ie"
 },
 {
-    cheeseImage: "../images/StJames.jpg",
-    locationName: "St. Andrews Cheese Company",
-    address: "Falside Farm Cottage, Pittenweem, Anstruther, Scotland KY10 2RT",
-    date: "November 29th 2019",
-    time: "5:15pm - 7:00pm",
-    ticketPrice: "$58.50 up to $409.35",
-    directionURL: "",
+    cheeseImage: "../images/StAndrews.jpg",
+    locationName: "Location Time: St. Andrews Cheese Company",
+    address: "Address: Falside Farm Cottage, Pittenweem, Anstruther, Scotland KY10 2RT",
+    date: "Date: November 29th 2019",
+    time: "Time: 5:15pm - 7:00pm",
+    ticketPrice: "Ticket Pricing: $58.50 up to $409.35",
+    albumPlaying: "Playing the album: Treat Your Beats and lucky audience members will join for random improv songs involving dairy product titles pulled from a hat",
     websiteURL: "https://www.standrewscheese.co.uk"
 },
 {
-    cheeseImage: "../images/StJames.jpg",
-    locationName: "Widmer's Cheese Cellars",
-    address: "214 W. Henni St., Theresa, WI 53091, United States",
-    date: "May 16th 2019",
-    time: "5:30pm - 9:00pm",
-    ticketPrice: "$260 up to $1,050",
-    directionURL: "",
+    cheeseImage: "../images/Widmer.jpg",
+    locationName: "Location: Widmer's Cheese Cellars",
+    address: "Address: 214 W. Henni St., Theresa, WI 53091, United States",
+    date: "Date: May 16th 2019",
+    time: "Time: 5:30pm - 9:00pm",
+    ticketPrice: "Ticket Pricing: $260 up to $1,050",
+    albumPlaying: "Playing the albums: Bring the Cheese and Treat Your Beats",
     websiteURL: "https://www.widmerscheese.com/factory-tour/" 
 }
 ];
@@ -168,13 +168,13 @@ const tourStringBuilder = () => {
   let newString = '';
   for (let i = 0; i < tourPlaces.length; i++){
       newString += `<div class = "tours">`;
-      newString += `<img src='${tourPlaces[i].cheeseImage}' width = '100px'></img>`;
+      newString += `<img src='${tourPlaces[i].cheeseImage}' width = '350px'></img>`;
       newString += `<h5>${tourPlaces[i].locationName}</h5>`;
       newString += `<h5>${tourPlaces[i].address}</h5>`;
       newString += `<h5>${tourPlaces[i].date}</h5>`;
       newString += `<h5>${tourPlaces[i].time}</h5>`;
       newString += `<h5>${tourPlaces[i].ticketPrice}</h5>`;
-      newString += `<a href="https://${tourPlaces[i].directionURL}" target="_blank">Click here for Google Maps directions<a>`;
+      newString += `<h5>${tourPlaces[i].albumPlaying}</h5>`;
       newString += `<h5>${tourPlaces[i].websiteURL}</h5>`;
       newString += `</div>`;
   }
