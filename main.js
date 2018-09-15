@@ -160,7 +160,7 @@ songLoop();
     genre: 'Folk Rock',
     price: '$9.99',
     albumDescription: "This Album was written by all band members. This album has the #1 Hit Song Treat Your Beats.",
-    }, 
+    }
 ];
 
 const bandAlbums = (albumArray) => {
