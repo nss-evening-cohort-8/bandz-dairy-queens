@@ -1,4 +1,5 @@
 // Image sliding begins
+
 const images = [
     "images/groupImg.jpg",
     "images/jw-image.jpg",
@@ -7,13 +8,16 @@ const images = [
     "images/mw-image.jpg",
     "images/rp-image1.jpg"
 ];
+
 // function for Print To DOM
+
 const printToDom = (stringToPrint, divId) => {
     const selectedDiv = document.getElementById(divId);
     if (selectedDiv!==null){
     selectedDiv.innerHTML = stringToPrint; 
 }
 }
+
 //   function to slide Images
 const slideMyImages= (i) => {
      setTimeout(()=> {    
@@ -79,24 +83,36 @@ bandMemberStringBuilder();
 //Song Page Start
 
 const songData = [
-    {albumName: 'Bring the Cheese',
-    songOne: 'Born to Brie wild',
+    {
+    albumName: 'Bring the Cheese',
+    image: '../images/theCheese.jpg',
+    soundFile: 'mandolin.mp3',
+    songOne: "It's too Gouda be true",
     songTwo: 'Munster Mash',
     songThree: 'Ricottanother thing coming',
-    songFour: "It's too Gouda to be true",
-    songFive: 'You Feta believe it' }, 
-    {albumName: 'Cows go Moo',
+    songFour: 'Born to Brie wild',
+    songFive: 'You Feta believe it' 
+    }, 
+    {
+    albumName: 'Cows go Moo',
+    image: '../images/cows.jpg',
+    soundFile: 'strummin.mp3',
     songOne: 'I moo, therefore I am',
-    songTwo: 'Stinky fromage',
+    songTwo: 'Fresh from the teet',
     songThree: 'Udderly delicious',
     songFour: 'Churn dat butta',
-    songFive: 'Thanks a latte' },
-    {albumName: 'Treat Your Beats',
+    songFive: 'Thanks a latte' 
+    },
+    {
+    albumName: 'Treat Your Beats',
+    image: '../images/treatyourbeat.jpg',
+    soundFile: 'theEntertainer.mp3',
     songOne: 'Lick me till ice cream',
-    songTwo: 'Sundae school',
+    songTwo: 'Sundae School',
     songThree: 'Not pudding up with it',
     songFour: "Don't break my cheesecake",
-    songFive: 'Whip my Cream' }
+    songFive: 'Whip my cream' 
+    }
 ];
 
 const songLoop = () => {
@@ -104,12 +120,16 @@ const songLoop = () => {
     for (i = 0; i < songData.length; i++) {
     stringBuilder += `<div class='albumSongs'>`; 
     stringBuilder += `<h2>${songData[i].albumName}</h2>`;
-    stringBuilder += `<p>${songData[i].songOne}</p>`
-    stringBuilder += `<p>${songData[i].songTwo}</p>`
-    stringBuilder += `<p>${songData[i].songThree}</p>`
-    stringBuilder += `<p>${songData[i].songFour}</p>`
-    stringBuilder += `<p>${songData[i].songFive}</p>`
-    stringBuilder += `</div>`
+    stringBuilder += `<img class='songImage' src="${songData[i].image}">`;
+    stringBuilder += `<p class='songName'>1. ${songData[i].songOne}</p>`;
+    stringBuilder += `<audio controls>`;
+    stringBuilder += `<source src="../soundFiles/${songData[i].soundFile}" type="audio/mpeg">`;
+    stringBuilder += `</audio>`;
+    stringBuilder += `<p class='songName'>2. ${songData[i].songTwo}</p>`;
+    stringBuilder += `<p class='songName'>3. ${songData[i].songThree}</p>`;
+    stringBuilder += `<p class='songName'>4. ${songData[i].songFour}</p>`;
+    stringBuilder += `<p class='songName'>5. ${songData[i].songFive}</p>`;
+    stringBuilder += `</div>`;
     };
     printToDom(stringBuilder, 'allSongs')
 };
@@ -118,3 +138,67 @@ songLoop();
 
 //Song Page End
 
+//Event Page Begin
+const tourPlaces = [
+{
+    imageURL: "Photo goes here",
+    locationName: "St. James Cheese Company",
+    address: "Warehouse District 641 Tchoupitoulas New Orleans",
+    date: "October 31st 2019",
+    time: "5:00pm - 10:00pm",
+    ticketPrice: "$100 up to $3,000",
+    description: "It's time for us to get rowdy ya'll. I hope you're ready to bring your favorite drinks and dairy products because this evening is all about good music, good food and the New Orleans Warehouse District. Come early and get a cheese plate along with some house wine. Parking for this event is all up to you. There are multiple places that you can go to depending on price range and availability. Also, this is New Orleans, so it's bound to get crrrazzzzy! Just be aware of your surroundings, your tolerances and of each other.",
+    websiteURL: "https://stjamescheese.com/"
+},
+{
+    imageURL: "Photo goes here",
+    locationName: "St. Tola Goat Farm",
+    address: "Gortbofearna, Maurice Mills, Ennistymon, Co. Clare, Ireland V95 XA9C",
+    date: "November 13th 2019",
+    time: "4:30pm - 8:30pm",
+    ticketPrice: "$250 up to $3,000",
+    description: "MMmmm Irish Goat Cheese... Folk Rock Music... Fields of green... Sounds like a good combination, right? If you want to take a tour of this farm, go ahead and schedule one today. They take about an hour to an hour and a half, but you get to understand sustainable farming before WE TAKE OVER! Parking will be very specific so please follow the guidelines. These are personal fields so please be respectful when you park.",
+    websiteURL: "www.st-tola.ie"
+},
+{
+    imageURL: "Photo goes here",
+    locationName: "St. Andrews Cheese Company",
+    address: "Falside Farm Cottage, Pittenweem, Anstruther, Scotland KY10 2RT",
+    date: "November 29th 2019",
+    time: "5:15pm - 7:00pm",
+    ticketPrice: "$58.50 up to $409.35",
+    description: "Like coffee? Like cake? Like cheese? Like our rockin' music!? Then, yeah, this place is for you. Enjoy some delicous home cooking along with their award winning cheeses before coming to the stage. You can watch the cheese being made; milk from happy and healthy cows. Parking will be free at this event. However, you are parking in one of the fields that this company owns. Please be respectful when driving through it. We are also not responsible for any cow-pie incidents. ",
+    websiteURL: "https://www.standrewscheese.co.uk"
+},
+{
+    imageURL: "Photo goes here",
+    locationName: "Widmer's Cheese Cellars",
+    address: "214 W. Henni St., Theresa, WI 53091, United States",
+    date: "May 16th 2019",
+    time: "5:30pm - 9:00pm",
+    ticketPrice: "$260 up to $1,050",
+    description: "You're in for a real treat here at Widmer's Cheese Cellars. Plan on getting to the show before we begin! You'll be able to tour the Cheese Cellar, seeing first hand how the cheese is made in the factory store and viewing area. It opens at 7am and closes just in time for us to begin. Eat some good cheese and then come rock out! Parking will be a bit tricky because Theresa is a small town. There will be special parking available for concert and cheese goers. Follow the signs and volunteers will point you in the correct direction. Parking will be free.",  
+    websiteURL: "https://www.widmerscheese.com/factory-tour/" 
+}
+];
+
+const tourStringBuilder = () => {
+  let newString = '';
+  for (let i = 0; i < tourPlaces.length; i++){
+      newString += `<div class = "tours">`;
+      newString += `<h5>${tourPlaces[i].imageURL}</h5>`;
+      newString += `<h5>${tourPlaces[i].locationName}</h5>`;
+      newString += `<h5>${tourPlaces[i].address}</h5>`;
+      newString += `<h5>${tourPlaces[i].date}</h5>`;
+      newString += `<h5>${tourPlaces[i].time}</h5>`;
+      newString += `<h5>${tourPlaces[i].ticketPrice}</h3>`;
+      newString += `<h5>${tourPlaces[i].description}</h5>`;
+      newString += `<h5>${tourPlaces[i].websiteURL}</h5>`;
+      newString += `</div>`;
+  }
+  printToDom(newString, 'tourEvents');
+};
+tourStringBuilder();
+
+
+// Event Page End
