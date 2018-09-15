@@ -123,17 +123,17 @@ songLoop();
 //Event Page Begin
 const tourPlaces = [
 {
-    imageURL: "Photo goes here",
+    cheeseImage: "../images/StJames.jpg",
     locationName: "St. James Cheese Company",
     address: "Warehouse District 641 Tchoupitoulas New Orleans",
     date: "October 31st 2019",
     time: "5:00pm - 10:00pm",
     ticketPrice: "$100 up to $3,000",
-    directionURL: "",
+    directionURL: "https://www.google.com/search?rlz=1C1CHBF_enUS811US811&q=st+james+cheese&npsic=0&rflfq=1&rlha=0&rllag=29935619,-90088332,2351&tbm=lcl&ved=2ahUKEwj93c2dqb3dAhWVPH0KHS6yDFoQtgN6BAgBEAQ&tbs=lrf:!2m1!1e3!2m1!1e16!3sIAE,lf:1,lf_ui:4&rldoc=1#rlfi=hd:;si:;mv:!3m12!1m3!1d12065.31575774894!2d-90.08833235!3d29.9356195!2m3!1f0!2f0!3f0!3m2!1i543!2i335!4f13.1",
     websiteURL: "https://stjamescheese.com/"
 },
 {
-    imageURL: "Photo goes here",
+    cheeseImage: "../images/StJames.jpg",
     locationName: "St. Tola Goat Farm",
     address: "Gortbofearna, Maurice Mills, Ennistymon, Co. Clare, Ireland V95 XA9C",
     date: "November 13th 2019",
@@ -143,7 +143,7 @@ const tourPlaces = [
     websiteURL: "www.st-tola.ie"
 },
 {
-    imageURL: "Photo goes here",
+    cheeseImage: "../images/StJames.jpg",
     locationName: "St. Andrews Cheese Company",
     address: "Falside Farm Cottage, Pittenweem, Anstruther, Scotland KY10 2RT",
     date: "November 29th 2019",
@@ -153,7 +153,7 @@ const tourPlaces = [
     websiteURL: "https://www.standrewscheese.co.uk"
 },
 {
-    imageURL: "Photo goes here",
+    cheeseImage: "../images/StJames.jpg",
     locationName: "Widmer's Cheese Cellars",
     address: "214 W. Henni St., Theresa, WI 53091, United States",
     date: "May 16th 2019",
@@ -168,13 +168,13 @@ const tourStringBuilder = () => {
   let newString = '';
   for (let i = 0; i < tourPlaces.length; i++){
       newString += `<div class = "tours">`;
-      newString += `<h5>${tourPlaces[i].imageURL}</h5>`;
+      newString += `<img src='${tourPlaces[i].cheeseImage}' width = '100px'></img>`;
       newString += `<h5>${tourPlaces[i].locationName}</h5>`;
       newString += `<h5>${tourPlaces[i].address}</h5>`;
       newString += `<h5>${tourPlaces[i].date}</h5>`;
       newString += `<h5>${tourPlaces[i].time}</h5>`;
-      newString += `<h5>${tourPlaces[i].ticketPrice}</h3>`;
-      newString += `<h5>${tourPlaces[i].directionURL}</h5>`;
+      newString += `<h5>${tourPlaces[i].ticketPrice}</h5>`;
+      newString += `<a href="https://${tourPlaces[i].directionURL}" target="_blank">Click here for Google Maps directions<a>`;
       newString += `<h5>${tourPlaces[i].websiteURL}</h5>`;
       newString += `</div>`;
   }
