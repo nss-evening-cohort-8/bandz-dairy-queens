@@ -1,16 +1,20 @@
 body {
-    background-color: wheat; 
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    background-image: url('/images/background-image.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: lightgray;
+    font-family: 'Acme', sans-serif;
 }   
 .wrapper {
+    display: flex;
+    flex-direction: column;
     flex: 1 0 auto;    
 }
 .main_nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-bottom: 1px solid magenta;
 }
 .main_nav > ul {
     display: flex;
@@ -24,24 +28,26 @@ body {
     text-decoration: none;
     color: white;
     padding: 10px 20px;
-    background-color: tomato;
+    background-color: magenta;
     margin:10px;
     border-radius: 5px;
 }
 .list_item :hover {
-    background-color: lightcoral;
+    background-color: hotpink;
 }
 #image_container{
     display: block;
-    margin: 10px auto;
+    margin: 20px auto;
     width: 60%;
 }
 .description_container {
     margin: 5px 20px;
 }
-p .aboutus_desc {
+.aboutus_desc {
     text-align: justify;
-    padding: 5px 25px;
+    padding: 5px;
+    font-size: 18px;
+    margin: 10px;
 }
 .header_description {
     text-align: center;
@@ -51,7 +57,7 @@ p .aboutus_desc {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-top: 1px solid black;
+    border-top: 1px solid magenta;
     flex-shrink: 0;
     margin-left: 5px;
     margin-right: 5px;
