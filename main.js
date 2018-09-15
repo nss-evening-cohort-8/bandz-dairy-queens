@@ -83,42 +83,53 @@ songLoop();
 
 //albumPage JS insert//
 
-let albumTitle = [
-    {releaseDate: 'August 2017',
-    image: 'placeHolder'
+const printToDom = (stringToPrint, divId) => {
+    const selectedDiv = document.getElementById(divId);
+    selectedDiv.innerHTML += stringToPrint;
+  };
+
+  let albumTitle = [
+    {albumName: 'Bring the Cheese',
+    releaseDate: 'August 2017',
+    image: 'placeHolder',
     genre: 'Folk Rock',
     price: '$9.99',
-    albumDescription: "insertHere",
+    albumDescription: "This album came together after a fun album release party where many guest brought us Cheese.",
     }, 
-    {releaseDate: 'March 2018',
+    {albumName: 'Cows Go Moo!',
+    releaseDate: 'March 2018',
     genre: 'Folk Rock',
     price: '$9.99',
-    albumDescription: "insertHere",
+    albumDescription: "This album was written by all band members while on a relaxing on a farm in Franklin,TN.",
     }, 
-    {releaseDate: 'July 2018',
+    {albumName: 'Treat Your Beats',
+    releaseDate: 'July 2018',
     genre: 'Folk Rock',
     price: '$9.99',
-    albumDescription: "insertHere",
+    albumDescription: "This Album was written by all band members. This album has the #1 Hit Song Treat Your Beats.",
     }, 
 ];
 
-const albumTitle = () => {
+const bandAlbums = (albumArray) => {
   let stringBuilder = '';
-  for (i = 0; i < albumPage.length; i++) {
+  for (i = 0; i < albumArray.length; i++) {
+  stringBuilder += `<h2>${albumArray[i].albumName}</h2>`;
   stringBuilder += `<div class='albumPage'>`; 
-  stringBuilder += `<img src= ${albumTitle[i].image}height="300" width="250">`
-  stringBuilder += `<h2>${albumTitle[i].albumName}</h2>`;
-  stringBuilder += `<p>${albumTitle[i].releaseDate}</p>`;
-  stringBuilder += `<p>${albumTitle[i].genre}</p>`;
-  stringBuilder += `<p>${albumTitle[i].price}</p>`;
-  stringBuilder += `<p>${albumTitle[i].albumDescription}</p>`;
-  
-  stringBuilder += `</div>`
+  stringBuilder += `<img src= ${albumArray[i].image}height="300" width="250">`;
+  stringBuilder += `<a href="link to song.html">Click here to listen to songs</a>`;
+  stringBuilder += `<div class="rating">`;
+  stringBuilder += ` <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>`;
+  stringBuilder += `</div>`;
+  stringBuilder += `<button type="button">Download</button>`;
+  stringBuilder += `<p>${albumArray[i].releaseDate}</p>`;
+  stringBuilder += `<p>${albumArray[i].genre}</p>`;
+  stringBuilder += `<p>${albumArray[i].price}</p>`;
+  stringBuilder += `<p>${albumArray[i].albumDescription}</p>`;
+  stringBuilder += `</div>`;
   };
-  printToDom(stringBuilder, 'albumPage')
+  printToDom(stringBuilder, 'album_container');
 };
-albumPage();
-
+bandAlbums(albumTitle);
 //End of Album Page JS Insert//
 
 
