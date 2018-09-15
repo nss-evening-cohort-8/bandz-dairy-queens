@@ -10,7 +10,9 @@ const images = [
 // function for Print To DOM
 const printToDom = (stringToPrint, divId) => {
     const selectedDiv = document.getElementById(divId);
+    if (selectedDiv!==null){
     selectedDiv.innerHTML = stringToPrint; 
+}
 }
 //   function to slide Images
 const slideMyImages= (i) => {
