@@ -31,13 +31,30 @@ body {
 .list_item :hover {
     background-color: lightcoral;
 }
+#image_container{
+    display: block;
+    margin: 10px auto;
+    width: 60%;
+}
+.description_container {
+    margin: 5px 20px;
+}
+p .aboutus_desc {
+    text-align: justify;
+    padding: 5px 25px;
+}
+.header_description {
+    text-align: center;
+    font-size: 2em;
+}
 .main_footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     border-top: 1px solid black;
     flex-shrink: 0;
-    margin: 20px 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 .main_footer > div {
     display: flex;
