@@ -1,11 +1,37 @@
 
-//Print To Dom function
-
-const printToDom = (stringToPrint,divId) => {
+// Image sliding begins
+const images = [
+    "images/groupImg.jpg",
+    "images/jw-image.jpg",
+    "images/mb-image.jpg",
+    "images/aw-image.jpg",
+    "images/mw-image.jpg",
+    "images/rp-image1.jpg"
+];
+// function for Print To DOM
+const printToDom = (stringToPrint, divId) => {
     const selectedDiv = document.getElementById(divId);
-    selectedDiv.innerHTML = stringToPrint;
-    
-};
+    if (selectedDiv!==null){
+    selectedDiv.innerHTML = stringToPrint; 
+}
+}
+//   function to slide Images
+const slideMyImages= (i) => {
+     setTimeout(()=> {    
+      newString=`<img src="${images[i]}" width= "900" height="500">`;
+       printToDom(newString, "image_container");
+    }, i * 3000);
+  }
+// function to loop through images
+const slideImage= () => {
+    for(i=0; i<images.length; i++){
+      slideMyImages(i);
+    }
+  }
+slideImage();
+setInterval(slideImage, 18000);
+  
+// image sliding ends
 
 // Band Member Start
 const dairyQueens= [
@@ -82,12 +108,6 @@ songLoop();
 
 
 //albumPage JS insert//
-
-const printToDom = (stringToPrint, divId) => {
-    const selectedDiv = document.getElementById(divId);
-    selectedDiv.innerHTML += stringToPrint;
-  };
-
   let albumTitle = [
     {albumName: 'Bring the Cheese',
     releaseDate: 'August 2017',
@@ -130,6 +150,22 @@ const bandAlbums = (albumArray) => {
   printToDom(stringBuilder, 'album_container');
 };
 bandAlbums(albumTitle);
+
+
+//Function for Alert//
+
+const alertConnect = () => {
+    let firstName = document.getElementById('firstName').value
+    let lastName = document.getElementById('lastName').value
+    let emailAddress = document.getElementById('emailAddress').value
+    alert( `Thanks ${firstName} ${lastName} for Contacting Beatz of Dairy Queens! We will be sending a email to ${emailAddress} soon.`)
+};
+let submitButton= document.getElementById('submit');
+submitButton.addEventListener('click', function(){alertConnect()});
+
+
+
+
 //End of Album Page JS Insert//
 
 
