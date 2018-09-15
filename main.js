@@ -138,64 +138,6 @@ const songLoop = () => {
 songLoop();
 
 //Song Page End
-//albumPage JS insert//
-  let albumTitle = [
-    {albumName: 'Bring the Cheese',
-    releaseDate: 'August 2017',
-    image: '../images/theCheese.jpg',
-    genre: 'Folk Rock',
-    price: '$9.99',
-    albumDescription: "This album came together after a fun album release party where many guest brought us Cheese.",
-    }, 
-    {albumName: 'Cows Go Moo!',
-    releaseDate: 'March 2018',
-    image: '../images/cows.jpg',
-    genre: 'Folk Rock',
-    price: '$9.99',
-    albumDescription: "This album was written by all band members while on a relaxing on a farm in Franklin,TN.",
-    }, 
-    {albumName: 'Treat Your Beats',
-    releaseDate: 'July 2018',
-    image: '../images/treatyourbeat.jpg',
-    genre: 'Folk Rock',
-    price: '$9.99',
-    albumDescription: "This Album was written by all band members. This album has the #1 Hit Song Treat Your Beats.",
-    }
-];
-
-const bandAlbums = (albumArray) => {
-  let stringBuilder = '';
-  for (i = 0; i < albumArray.length; i++) {
-  stringBuilder += `<h2>${albumArray[i].albumName}</h2>`;
-  stringBuilder += `<div class='albumPage'>`; 
-  stringBuilder += `<img src= ${albumArray[i].image}><br>`;
-  stringBuilder += `<a href="link to song.html">Click here to listen to songs</a>`;
-  stringBuilder += `<div class="rating">`;
-  stringBuilder += ` <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>`;
-  stringBuilder += `</div>`;
-  stringBuilder += `<button type="button">Download</button>`;
-  stringBuilder += `<p>${albumArray[i].releaseDate}</p>`;
-  stringBuilder += `<p>${albumArray[i].genre}</p>`;
-  stringBuilder += `<p>${albumArray[i].price}</p>`;
-  stringBuilder += `<p>${albumArray[i].albumDescription}</p>`;
-  stringBuilder += `</div>`;
-  };
-  printToDom(stringBuilder, 'album_container');
-};
-bandAlbums(albumTitle);
-
-
-//Function for Alert//
-
-const alertConnect = () => {
-    let firstName = document.getElementById('firstName').value
-    let lastName = document.getElementById('lastName').value
-    let emailAddress = document.getElementById('emailAddress').value
-    alert( `Thanks ${firstName} ${lastName} for Contacting Beatz of Dairy Queens! We will be sending a email to ${emailAddress} soon.`)
-};
-let submitButton= document.getElementById('submit');
-submitButton.addEventListener('click', function(){alertConnect()});
-//End of Album Page JS Insert//
 //Event Page Begin
 const tourPlaces = [
 {
@@ -258,4 +200,62 @@ const tourStringBuilder = () => {
 };
 tourStringBuilder();
 // Event Page End
+//albumPage JS insert//
+let albumTitle = [
+    {albumName: 'Bring the Cheese',
+    releaseDate: 'August 2017',
+    image: '../images/theCheese.jpg',
+    genre: 'Folk Rock',
+    price: '$9.99',
+    albumDescription: "This album came together after a fun album release party where many guest brought us Cheese.",
+    }, 
+    {albumName: 'Cows Go Moo!',
+    releaseDate: 'March 2018',
+    image: '../images/cows.jpg',
+    genre: 'Folk Rock',
+    price: '$9.99',
+    albumDescription: "This album was written by all band members while on a relaxing on a farm in Franklin,TN.",
+    }, 
+    {albumName: 'Treat Your Beats',
+    releaseDate: 'July 2018',
+    image: '../images/treatyourbeat.jpg',
+    genre: 'Folk Rock',
+    price: '$9.99',
+    albumDescription: "This Album was written by all band members. This album has the #1 Hit Song Treat Your Beats.",
+    }
+];
+
+const bandAlbums = (albumArray) => {
+  let stringBuilder = '';
+  for (i = 0; i < albumArray.length; i++) {
+  stringBuilder += `<h2>${albumArray[i].albumName}</h2>`;
+  stringBuilder += `<div class='albumPage'>`; 
+  stringBuilder += `<img class= "albumImages" src= ${albumArray[i].image}><br>`;
+  stringBuilder += `<a href="link to song.html">Click here to listen to songs</a>`;
+  stringBuilder += `<div class="rating">`;
+  stringBuilder += ` <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>`;
+  stringBuilder += `</div>`;
+  stringBuilder += `<button type="button">Download</button>`;
+  stringBuilder += `<p>${albumArray[i].releaseDate}</p>`;
+  stringBuilder += `<p>${albumArray[i].genre}</p>`;
+  stringBuilder += `<p>${albumArray[i].price}</p>`;
+  stringBuilder += `<p>${albumArray[i].albumDescription}</p>`;
+  stringBuilder += `</div>`;
+  };
+  printToDom(stringBuilder, 'album_container');
+};
+bandAlbums(albumTitle);
+
+//Function for Alert//
+
+const alertConnect = () => {
+    let firstName = document.getElementById('firstName').value
+    let lastName = document.getElementById('lastName').value
+    let emailAddress = document.getElementById('emailAddress').value
+    alert( `Thanks ${firstName} ${lastName} for Contacting Beatz of Dairy Queens! We will be sending a email to ${emailAddress} soon.`)
+};
+let submitButton= document.getElementById('submit');
+submitButton.addEventListener('click', function(){alertConnect()});
+
+//End of Album Page JS Insert//
 
