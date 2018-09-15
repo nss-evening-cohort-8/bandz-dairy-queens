@@ -44,7 +44,7 @@ const dairyQueens= [
     biography: 'The rain stick sensation Blizzard found her love for music started at a young age. She traveled the world as a solo artist for years. She was ready to give up her career as until stumbling upon The Dairy dairy Queens at a local bar in 2010. Her career with them continues to skyrocket and shows us that you should never give up on your passions.'
     },
     { 
-    stageNname:'Hot Fudge',
+    stageName:'Hot Fudge',
     imgUrl: 'image/rp-image.jpg',
     biography:'Los Angeles, Hot fudge has spent her entire life saturated in music, dance and performance, it is the release of his debut album Bringing in the Cheese that will mark his true musical introduction to the world.'
     },
@@ -68,7 +68,7 @@ const dairyQueens= [
 const bandMemberStringBuilder = () => {
     let newString = '';
     for(let i = 0; i < dairyQueens.length; i++){
-        newString += `<div class = "dairyQueens">;`
+        newString += `<div class = "dairyQueens">`;
         newString += `<h3>${dairyQueens[i].stageName}</h3>`;
         newString += `<h3>${dairyQueens[i].imgUrl}</h3>`;
         newString += `<h3>${dairyQueens[i].biography}</h3>`;
