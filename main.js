@@ -187,14 +187,15 @@ const tourStringBuilder = () => {
   for (let i = 0; i < tourPlaces.length; i++){
       newString += `<div class = "tours">`;
       newString += `<img src='${tourPlaces[i].cheeseImage}' width = '350px'></img>`;
-      newString += `<h5>${tourPlaces[i].locationName}</h5>`;
-      newString += `<h5>${tourPlaces[i].address}</h5>`;
-      newString += `<h5>${tourPlaces[i].date}</h5>`;
-      newString += `<h5>${tourPlaces[i].time}</h5>`;
-      newString += `<h5>${tourPlaces[i].ticketPrice}</h5>`;
-      newString += `<h5>${tourPlaces[i].albumPlaying}</h5>`;
-      newString += `<h5>${tourPlaces[i].websiteURL}</h5>`;
+      newString += `<p>${tourPlaces[i].locationName}</p>`;
+      newString += `<p>${tourPlaces[i].address}</p>`;
+      newString += `<p>${tourPlaces[i].date}</p>`;
+      newString += `<p>${tourPlaces[i].time}</p>`;
+      newString += `<p>${tourPlaces[i].ticketPrice}</p>`;
+      newString += `<p>${tourPlaces[i].albumPlaying}</p>`;
+      newString += `<p>${tourPlaces[i].websiteURL}</p>`;
       newString += `</div>`;
+      newString += '<br>';
   }
   printToDom(newString, 'tourEvents');
 };
