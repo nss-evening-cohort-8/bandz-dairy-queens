@@ -6,6 +6,18 @@ const printToDom = (stringToPrint,divId) => {
         selectedDiv.innerHTML = stringToPrint; 
     }
 }
+
+// Image sliding begins
+
+const images = [
+    "images/groupImg.jpg",
+    "images/jw-image.jpg",
+    "images/mb-image.jpg",
+    "images/aw-image.jpg",
+    "images/mw-image.jpg",
+    "images/rp-image1.jpg"
+];
+
 //   function to slide Images
 const slideMyImages= (i) => {
      setTimeout(()=> {    

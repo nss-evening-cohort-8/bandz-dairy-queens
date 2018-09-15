@@ -1,9 +1,5 @@
 body {
-<<<<<<< HEAD
-    background-color: burlywood;
-=======
     background-color: wheat; 
->>>>>>> master
     height: 100%;
     display: flex;
     flex-direction: column;
