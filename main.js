@@ -72,7 +72,7 @@ const bandMemberStringBuilder = () => {
         newString += `<div class = "dairyQueens">`;
         newString += `<h3>${dairyQueens[i].stageName}</h3>`;
         newString += `<img src= ${dairyQueens[i].imgUrl} width = "200px">`;
-        newString += `<h3>${dairyQueens[i].biography}</h3>`;
+        newString += `<p>${dairyQueens[i].biography}</p>`;
         newString +=  `</div>`;
 
     }
