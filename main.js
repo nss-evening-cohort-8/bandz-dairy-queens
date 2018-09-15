@@ -73,7 +73,7 @@ const songData = [
     image: '../images/cows.jpg',
     soundFile: 'strummin.mp3',
     songOne: 'I moo, therefore I am',
-    songTwo: 'Stinky fromage',
+    songTwo: 'Fresh from the teet',
     songThree: 'Udderly delicious',
     songFour: 'Churn dat butta',
     songFive: 'Thanks a latte' 
