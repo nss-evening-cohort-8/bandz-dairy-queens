@@ -61,6 +61,19 @@ const dairyQueens= [
     }
     
 ];
+const bandMemberStringBuilder = () => {
+    let newString = '';
+    for(let i = 0; i < dairyQueens.length; i++){
+        newString += `<div class = "dairyQueens">;`
+        newString += `<h3>${dairyQueens[i].stageName}</h3>`;
+        newString += `<h3>${dairyQueens[i].imgUrl}</h3>`;
+        newString += `<h3>${dairyQueens[i].biography}</h3>`;
+        newString +=  `</div>`;
+
+    }
+    printToDom(newString, 'dairyQueens');
+}
+bandMemberStringBuilder();
 // Band Member Page End
 
 //Song Page Start
