@@ -40,27 +40,27 @@ setInterval(slideImage, 18000);
 const dairyQueens= [
     {
     stageName:'Blizzard',
-    imgUrl: 'images/blizzardpicture.jpg',
+    imgUrl: '../images/blizzardpicture.jpg',
     biography: 'The rain stick sensation Blizzard found her love for music started at a young age. She traveled the world as a solo artist for years. She was ready to give up her career as until stumbling upon The Dairy dairy Queens at a local bar in 2010. Her career with them continues to skyrocket and shows us that you should never give up on your passions.'
     },
     { 
     stageName:'Hot Fudge',
-    imgUrl: 'image/rp-image.jpg',
+    imgUrl: '../images/rp-image.jpg',
     biography:'Los Angeles, Hot fudge has spent her entire life saturated in music, dance and performance, it is the release of his debut album Bringing in the Cheese that will mark his true musical introduction to the world.'
     },
     {
     stageName: 'Peach Carmel',
-    imgUrl:'image/peachcarmel.jpg',
+    imgUrl:'../images/peachcarmel.jpg',
     biography: 'Peach Carmel is a highly talented lyricist, singer, songwriter. Involved in music for about 10 years, she has recorded a plethera of music and played and performed at numerous venues. She found herself at a point in life where she wanted to stop running from God. She writes her own music, always creating it totally real and universal.' 
     }, 
     {
     stageName: 'Baby Swiss',
-    imgUrl:'image/babyswiss.jpg',
+    imgUrl:'../images/babyswiss.jpg',
     biography:'At just 24 years old, Baby Swiss has already traveled a path that has taken him from the depths of a broken home to the top of her game as a songwriter, producer, philanthropist and ultimately, a believer. Her attitude and work ethic reflect a mantra that says anything is possible if you just put your mind to it.'
     },
     {
     stageName: 'Butter',
-    imgUrl:'image/butter.jpg',
+    imgUrl:'../images/butter.jpg',
     biography: 'Butter was found by the group in 2011 at a local park stringing her guitar. Her musical journey led her to a life of patrying and eventually left her homeless. After joining the band her confidence grew and style developed. She is now an inspirational figure and is a key member of the group.'
     }
     
@@ -70,7 +70,7 @@ const bandMemberStringBuilder = () => {
     for(let i = 0; i < dairyQueens.length; i++){
         newString += `<div class = "dairyQueens">`;
         newString += `<h3>${dairyQueens[i].stageName}</h3>`;
-        newString += `<h3>${dairyQueens[i].imgUrl}</h3>`;
+        newString += `<img src= ${dairyQueens[i].imgUrl} width = "200px">`;
         newString += `<h3>${dairyQueens[i].biography}</h3>`;
         newString +=  `</div>`;
 
