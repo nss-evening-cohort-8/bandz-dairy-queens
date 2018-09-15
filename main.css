@@ -39,7 +39,7 @@ body {
 .description_container {
     margin: 5px 20px;
 }
-p .decription {
+p .aboutus_desc {
     text-align: justify;
     padding: 5px 25px;
 }
@@ -53,7 +53,8 @@ p .decription {
     justify-content: space-between;
     border-top: 1px solid black;
     flex-shrink: 0;
-    margin: 20px 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 .main_footer > div {
     display: flex;
