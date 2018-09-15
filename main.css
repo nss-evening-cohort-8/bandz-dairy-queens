@@ -65,3 +65,28 @@ p .aboutus_desc {
     padding: 10px 25px;   
     margin: auto;
 }
+
+
+/* Song Page Start */
+
+#allSongs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.songImage {
+    max-width: 60%;
+    max-height: 700px;
+}
+
+.songheader {
+    display: flex;
+    justify-content: center;
+}
+
+.songName {
+    font-weight: bold;
+}
+
+/* Song Page End */
