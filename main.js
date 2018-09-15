@@ -129,7 +129,7 @@ const tourPlaces = [
     date: "October 31st 2019",
     time: "5:00pm - 10:00pm",
     ticketPrice: "$100 up to $3,000",
-    description: "It's time for us to get rowdy ya'll. I hope you're ready to bring your favorite drinks and dairy products because this evening is all about good music, good food and the New Orleans Warehouse District. Come early and get a cheese plate along with some house wine. Parking for this event is all up to you. There are multiple places that you can go to depending on price range and availability. Also, this is New Orleans, so it's bound to get crrrazzzzy! Just be aware of your surroundings, your tolerances and of each other.",
+    directionURL: "",
     websiteURL: "https://stjamescheese.com/"
 },
 {
@@ -139,7 +139,7 @@ const tourPlaces = [
     date: "November 13th 2019",
     time: "4:30pm - 8:30pm",
     ticketPrice: "$250 up to $3,000",
-    description: "MMmmm Irish Goat Cheese... Folk Rock Music... Fields of green... Sounds like a good combination, right? If you want to take a tour of this farm, go ahead and schedule one today. They take about an hour to an hour and a half, but you get to understand sustainable farming before WE TAKE OVER! Parking will be very specific so please follow the guidelines. These are personal fields so please be respectful when you park.",
+    directionURL: "",
     websiteURL: "www.st-tola.ie"
 },
 {
@@ -149,7 +149,7 @@ const tourPlaces = [
     date: "November 29th 2019",
     time: "5:15pm - 7:00pm",
     ticketPrice: "$58.50 up to $409.35",
-    description: "Like coffee? Like cake? Like cheese? Like our rockin' music!? Then, yeah, this place is for you. Enjoy some delicous home cooking along with their award winning cheeses before coming to the stage. You can watch the cheese being made; milk from happy and healthy cows. Parking will be free at this event. However, you are parking in one of the fields that this company owns. Please be respectful when driving through it. We are also not responsible for any cow-pie incidents. ",
+    directionURL: "",
     websiteURL: "https://www.standrewscheese.co.uk"
 },
 {
@@ -159,7 +159,7 @@ const tourPlaces = [
     date: "May 16th 2019",
     time: "5:30pm - 9:00pm",
     ticketPrice: "$260 up to $1,050",
-    description: "You're in for a real treat here at Widmer's Cheese Cellars. Plan on getting to the show before we begin! You'll be able to tour the Cheese Cellar, seeing first hand how the cheese is made in the factory store and viewing area. It opens at 7am and closes just in time for us to begin. Eat some good cheese and then come rock out! Parking will be a bit tricky because Theresa is a small town. There will be special parking available for concert and cheese goers. Follow the signs and volunteers will point you in the correct direction. Parking will be free.",  
+    directionURL: "",
     websiteURL: "https://www.widmerscheese.com/factory-tour/" 
 }
 ];
@@ -174,7 +174,7 @@ const tourStringBuilder = () => {
       newString += `<h5>${tourPlaces[i].date}</h5>`;
       newString += `<h5>${tourPlaces[i].time}</h5>`;
       newString += `<h5>${tourPlaces[i].ticketPrice}</h3>`;
-      newString += `<h5>${tourPlaces[i].description}</h5>`;
+      newString += `<h5>${tourPlaces[i].directionURL}</h5>`;
       newString += `<h5>${tourPlaces[i].websiteURL}</h5>`;
       newString += `</div>`;
   }
