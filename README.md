@@ -26,4 +26,4 @@ localhost:9999
 
 ## Screenshots
 
-![main page](./screenshots/js-fuctions-main.PNG)
+![main page](images/homepage.PNG)
