@@ -91,28 +91,17 @@ p .aboutus_desc {
 
 /* Song Page End */
 
+
 /* Tour Page Begins */
-#tourEvents {
-    background-image: url(../images/guitar.jpg);
-    background-repeat: no-repeat;
-    
-}
 
 #tourEvents {
-    position: relative;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-#tourEvents::after {
-    content: '';
-    position: relative;
-    width: 6px;
-    background-color: white;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 76%;
+    padding: auto;
+    margin: auto;
 }
 
 .tours::after {
@@ -130,30 +119,22 @@ p .aboutus_desc {
 
 .tours::before {
     content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
     width: 0;
-    z-index: 1;
-    left: 527px;
+    /* left: 527px; */
     border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-}
+    border-width: 5px 5px 5px 0;
+    border-color: transparent white transparent transparent; 
+} 
 
 .tours {
     padding: 20px 30px;
-    margin: auto;
+    margin: 10px;
     background-color: white;
     position: relative;
     border-radius: 6px;
-    right: 290px;
-}
-
-.container {
-    width: 100%;
-    padding-left: 40px;
-    padding-right: 25px;
+    /* right: 290px; */
+    max-width: 30%;
+    text-align: justify;
 }
 
 /*Tour Event Page Ends*/
