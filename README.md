@@ -26,4 +26,13 @@ localhost:9999
 
 ## Screenshots
 
+# Homepage
 ![main page](images/homepage.PNG)
+
+# Band Members Page
+
+# Tour/Event Page
+
+# Album Page
+
+# Song Page
