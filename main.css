@@ -99,7 +99,6 @@ body {
 
 
 /* Tour Page Begins */
-
 #tourTitle {
     text-align: center;
     font-size: 3em;
@@ -109,7 +108,7 @@ body {
     text-align: center;
     font-size: 1em;
     border-radius: 20px;
-    border: 1px solid steelblue;
+    border: 2px solid steelblue;
     max-width: 76%;
     margin: auto;
     padding: 8px;
@@ -141,7 +140,6 @@ body {
 .tours::before {
     content: " ";
     width: 0;
-    /* left: 527px; */
     border: medium solid magenta;
     border-width: 5px 5px 5px 0;
     border-color: transparent white transparent transparent; 
@@ -150,13 +148,16 @@ body {
 .tours {
     padding: 20px 30px;
     margin: 10px;
-    background-color: rgb(197, 67, 197);
+    /* background-color: rgb(197, 67, 197); */
+    border: 2px solid rgb(197, 67, 197);
     position: relative;
     border-radius: 6px;
-    /* right: 290px; */
     max-width: 30%;
-    text-align: justify;
+    text-align: center;
 }
 
+a:link{
+    color: lightgray;
+}
 /*Tour Event Page Ends*/
 

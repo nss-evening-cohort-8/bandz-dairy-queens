@@ -143,7 +143,7 @@ const tourPlaces = [
 {
     cheeseImage: "../images/StJames.jpg",
     locationName: "Location: St. James Cheese Company",
-    address: "Address: Warehouse District 641 Tchoupitoulas New Orleans",
+    address: "Address: Warehouse District 641, Tchoupitoulas, New Orleans, United States",
     date: "Date: October 31st 2019",
     time: "Time: 5:00pm - 10:00pm",
     ticketPrice: "Ticket Pricing: $100 up to $3,000",
@@ -173,7 +173,7 @@ const tourPlaces = [
 {
     cheeseImage: "../images/Widmer.jpg",
     locationName: "Location: Widmer's Cheese Cellars",
-    address: "Address: 214 W. Henni St., Theresa, WI 53091, United States",
+    address: "Address: 214 W. Henni Street, Theresa, Winsconsin, United States",
     date: "Date: May 16th 2019",
     time: "Time: 5:30pm - 9:00pm",
     ticketPrice: "Ticket Pricing: $260 up to $1,050",
@@ -186,14 +186,14 @@ const tourStringBuilder = () => {
   let newString = '';
   for (let i = 0; i < tourPlaces.length; i++){
       newString += `<div class = "tours">`;
-      newString += `<img src='${tourPlaces[i].cheeseImage}' width = '350px'></img>`;
+      newString += `<img src='${tourPlaces[i].cheeseImage}' width = '350px' height = '250px'></img>`;
       newString += `<p>${tourPlaces[i].locationName}</p>`;
       newString += `<p>${tourPlaces[i].address}</p>`;
       newString += `<p>${tourPlaces[i].date}</p>`;
       newString += `<p>${tourPlaces[i].time}</p>`;
       newString += `<p>${tourPlaces[i].ticketPrice}</p>`;
       newString += `<p>${tourPlaces[i].albumPlaying}</p>`;
-      newString += `<p>${tourPlaces[i].websiteURL}</p>`;
+      newString += `<a href="https://${tourPlaces[i].websiteURL}" target="_blank">Click here to visit their webpage</a>`;
       newString += `</div>`;
       newString += '<br>';
   }
