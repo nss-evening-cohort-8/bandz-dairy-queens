@@ -47,7 +47,7 @@ const dairyQueens= [
     { 
     stageName:'Hot Fudge',
     imgUrl: '../images/rp-image.jpg',
-    biography:'Los Angeles, Hot fudge has spent her entire life saturated in music, dance and performance, it is the release of his debut album Bringing in the Cheese that will mark her true musical introduction to the world.'
+    biography:'Los Angeles, Hot fudge has spent her entire life saturated in music, dance and performance, it is the release of her debut album Bringing in the Cheese that will mark her true musical introduction to the world.'
     },
     {
     stageName: 'Peach Carmel',
