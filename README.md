@@ -38,4 +38,4 @@ localhost:9999
 # Album Page
 
 # Song Page
-![song page](images/songPage.PNG)
+![song page](images/songPage.png)
