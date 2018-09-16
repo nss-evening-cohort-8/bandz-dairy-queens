@@ -104,21 +104,21 @@ body {
 }
 
 .bandImages {
-display: inline-block;
-overflow: hidden;
-margin-left: auto;
-margin-right: auto;
-image-rendering: auto;
-image-rendering: crisp-edges;
+    display: inline-block;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
 }
 
 .dairyQueens {
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-border: 2px solid magenta;
-max-width: 32%;
-min-width: 32%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 2px solid magenta;
+    max-width: 32%;
+    min-width: 32%;
 }
 
 #dairyQueens {
