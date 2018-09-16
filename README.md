@@ -33,6 +33,7 @@ localhost:9999
 ![band members page](images/bandMembersPage.png)
 
 # Tour/Event Page
+![tour page](images/TourPage.png)
 
 # Album Page
 
