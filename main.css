@@ -97,6 +97,7 @@ body {
 
 /* Song Page End */
 
+<<<<<<< HEAD
 
 /* Tour Page Begins */
 #tourTitle {
@@ -159,4 +160,41 @@ a:link{
     color: lightgray;
 }
 /*Tour Event Page Ends*/
+=======
+/* Band Member Page Stat */
+
+.Bio {
+    text-align: center;
+}
+
+.bandImages {
+    display: inline-block;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+}
+
+.dairyQueens {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 2px solid magenta;
+    max-width: 32%;
+    min-width: 32%;
+}
+
+#dairyQueens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.StageName {
+    text-align: center;
+}
+ 
+/* Band Member Page End */
+>>>>>>> master
 
