@@ -97,6 +97,68 @@ body {
 
 /* Song Page End */
 
+
+/* Tour Page Begins */
+#tourTitle {
+    text-align: center;
+    font-size: 3em;
+}
+
+#philosophy {
+    text-align: center;
+    font-size: 1em;
+    border-radius: 20px;
+    border: 2px solid steelblue;
+    max-width: 76%;
+    margin: auto;
+    padding: 8px;
+}
+
+#tourEvents {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 76%;
+    padding: auto;
+    margin: auto;
+}
+
+.tours::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: steelblue;
+    border: 4px solid lightgrey;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.tours::before {
+    content: " ";
+    width: 0;
+    border: medium solid magenta;
+    border-width: 5px 5px 5px 0;
+    border-color: transparent white transparent transparent; 
+} 
+
+.tours {
+    padding: 20px 30px;
+    margin: 10px;
+    border: 2px solid rgb(197, 67, 197);
+    position: relative;
+    border-radius: 6px;
+    max-width: 30%;
+    text-align: center;
+}
+
+a:link{
+    color: lightgray;
+}
+/*Tour Event Page Ends*/
 /* Band Member Page Stat */
 
 .Bio {
