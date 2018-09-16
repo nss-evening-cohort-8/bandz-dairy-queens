@@ -193,7 +193,7 @@ const tourStringBuilder = () => {
       newString += `<p>${tourPlaces[i].time}</p>`;
       newString += `<p>${tourPlaces[i].ticketPrice}</p>`;
       newString += `<p>${tourPlaces[i].albumPlaying}</p>`;
-      newString += `<a href="https://${tourPlaces[i].websiteURL}" target="_blank">Click here to visit their webpage</a>`;
+      newString += `<a href="${tourPlaces[i].websiteURL}" target="_blank">Click here to visit their webpage</a>`;
       newString += `</div>`;
       newString += '<br>';
   }
