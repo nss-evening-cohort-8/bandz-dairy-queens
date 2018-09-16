@@ -30,9 +30,12 @@ localhost:9999
 ![main page](images/homepage.PNG)
 
 # Band Members Page
+![band members page](images/bandMembersPage.png)
 
 # Tour/Event Page
 
 # Album Page
 
 # Song Page
+![song page](images/songPage1.PNG)
+![song page](images/songPage2.PNG)
