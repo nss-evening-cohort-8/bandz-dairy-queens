@@ -231,7 +231,7 @@ const bandAlbums = (albumArray) => {
   stringBuilder += `<div class='albumPage'>`; 
   stringBuilder += `<h2>${albumArray[i].albumName}</h2>`;
   stringBuilder += `<img class= "albumImages" src= ${albumArray[i].image}><br>`;
-  stringBuilder += `<a href="../html/songs.html">Click here to listen to songs</a>`;
+  stringBuilder += `<a class= "links" href="../html/songs.html">Click here to listen to songs</a>`;
   stringBuilder += `<div class="rating">`;
   stringBuilder += ` <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>`;
   stringBuilder += `</div>`;
