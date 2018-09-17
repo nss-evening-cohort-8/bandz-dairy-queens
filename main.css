@@ -1,16 +1,20 @@
 body {
-    background-color: wheat; 
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    background-image: url('/images/background-image.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: lightgray;
+    font-family: 'Acme', sans-serif;
 }   
 .wrapper {
+    display: flex;
+    flex-direction: column;
     flex: 1 0 auto;    
 }
 .main_nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-bottom: 1px solid magenta;
 }
 .main_nav > ul {
     display: flex;
@@ -24,24 +28,26 @@ body {
     text-decoration: none;
     color: white;
     padding: 10px 20px;
-    background-color: tomato;
+    background-color: magenta;
     margin:10px;
     border-radius: 5px;
 }
 .list_item :hover {
-    background-color: lightcoral;
+    background-color: hotpink;
 }
 #image_container{
     display: block;
-    margin: 10px auto;
+    margin: 20px auto;
     width: 60%;
 }
 .description_container {
-    margin: 5px 20px;
+    margin: 5px 150px;
 }
-p .aboutus_desc {
+.aboutus_desc {
     text-align: justify;
-    padding: 5px 25px;
+    padding: 5px;
+    font-size: 18px;
+    margin: 10px;
 }
 .header_description {
     text-align: center;
@@ -51,7 +57,7 @@ p .aboutus_desc {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-top: 1px solid black;
+    border-top: 1px solid magenta;
     flex-shrink: 0;
     margin-left: 5px;
     margin-right: 5px;
@@ -90,3 +96,102 @@ p .aboutus_desc {
 }
 
 /* Song Page End */
+
+
+/* Tour Page Begins */
+#tourTitle {
+    text-align: center;
+    font-size: 3em;
+}
+
+#philosophy {
+    text-align: center;
+    font-size: 1em;
+    border-radius: 20px;
+    border: 2px solid steelblue;
+    max-width: 76%;
+    margin: auto;
+    padding: 8px;
+}
+
+#tourEvents {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 76%;
+    padding: auto;
+    margin: auto;
+}
+
+.tours::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: steelblue;
+    border: 4px solid lightgrey;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.tours::before {
+    content: " ";
+    width: 0;
+    border: medium solid magenta;
+    border-width: 5px 5px 5px 0;
+    border-color: transparent white transparent transparent; 
+} 
+
+.tours {
+    padding: 20px 30px;
+    margin: 10px;
+    border: 2px solid rgb(197, 67, 197);
+    position: relative;
+    border-radius: 6px;
+    max-width: 30%;
+    text-align: center;
+}
+
+a:link{
+    color: lightgray;
+}
+/*Tour Event Page Ends*/
+/* Band Member Page Stat */
+
+.Bio {
+    text-align: center;
+}
+
+.bandImages {
+    display: inline-block;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+}
+
+.dairyQueens {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 2px solid magenta;
+    max-width: 32%;
+    min-width: 32%;
+}
+
+#dairyQueens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.StageName {
+    text-align: center;
+}
+ 
+/* Band Member Page End */
+

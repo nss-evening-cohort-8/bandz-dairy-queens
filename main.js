@@ -41,28 +41,28 @@ setInterval(slideImage, 18000);
 const dairyQueens= [
     {
     stageName:'Blizzard',
-    imgUrl: 'images/blizzardpicture.jpg',
-    biography: 'The rain stick sensation Blizzard found her love for music started at a young age. She traveled the world as a solo artist for years. She was ready to give up her career as until stumbling upon The Dairy dairy Queens at a local bar in 2010. Her career with them continues to skyrocket and shows us that you should never give up on your passions.'
+    imgUrl: '../images/blizzardpicture.jpg',
+    biography: 'California based musician Blizzard is one of the architects behind this folk inspired sound. - powered by unbreakable harmonies with seemless songwritting adeptness that combines a story of both the joys and heartaches of life.'
     },
     { 
     stageName:'Hot Fudge',
-    imgUrl: 'image/rp-image.jpg',
-    biography:'Los Angeles, Hot fudge has spent her entire life saturated in music, dance and performance, it is the release of his debut album Bringing in the Cheese that will mark his true musical introduction to the world.'
+    imgUrl: '../images/rp-image.jpg',
+    biography:'Los Angeles, Hot fudge has spent her entire life saturated in music, dance and performance, it is the release of her debut album Bringing in the Cheese that will mark her true musical introduction to the world.'
     },
     {
     stageName: 'Peach Carmel',
-    imgUrl:'image/peachcarmel.jpg',
-    biography: 'Peach Carmel is a highly talented lyricist, singer, songwriter. Involved in music for about 10 years, she has recorded a plethera of music and played and performed at numerous venues. She found herself at a point in life where she wanted to stop running from God. She writes her own music, always creating it totally real and universal.' 
+    imgUrl:'../images/peachcarmel.jpg',
+    biography: 'Peach Carmel is a highly talented lyricist, singer, songwriter. Involved in music for about 10 years, she has recorded a plethera of music and played and performed at numerous venues. She writes her own music, always creating it totally real and universal.' 
     }, 
     {
     stageName: 'Baby Swiss',
-    imgUrl:'image/babyswiss.jpg',
-    biography:'At just 24 years old, Baby Swiss has already traveled a path that has taken him from the depths of a broken home to the top of her game as a songwriter, producer, philanthropist and ultimately, a believer. Her attitude and work ethic reflect a mantra that says anything is possible if you just put your mind to it.'
+    imgUrl:'../images/babyswiss.jpg',
+    biography:'At just 24 years old, Baby Swiss has already traveled a path that has taken her from the depths of a broken home to the top of her game as a songwriter, producer, and philanthropist. Her attitude and work ethic reflect a mantra that says anything is possible if you just put your mind to it.'
     },
     {
     stageName: 'Butter',
-    imgUrl:'image/butter.jpg',
-    biography: 'Butter was found by the group in 2011 at a local park stringing her guitar. Her musical journey led her to a life of patrying and eventually left her homeless. After joining the band her confidence grew and style developed. She is now an inspirational figure and is a key member of the group.'
+    imgUrl:'../images/butter.jpg',
+    biography: 'Butter was founded by the group in 2011 at a local park stringing her guitar. Her musical journey led her to a life of patrying and eventually left her homeless. After joining the band her confidence grew and style developed. She is now an inspirational figure and is a key member of the group.'
     }
     
 ];
@@ -70,9 +70,9 @@ const bandMemberStringBuilder = () => {
     let newString = '';
     for(let i = 0; i < dairyQueens.length; i++){
         newString += `<div class = "dairyQueens">`;
-        newString += `<h3>${dairyQueens[i].stageName}</h3>`;
-        newString += `<h3>${dairyQueens[i].imgUrl}</h3>`;
-        newString += `<h3>${dairyQueens[i].biography}</h3>`;
+        newString += `<h3 class = "stageName">${dairyQueens[i].stageName}</h3>`;
+        newString += `<img class = "bandImages" src= ${dairyQueens[i].imgUrl} width = "380px" height = "200px">`;
+        newString += `<p class = "bio">${dairyQueens[i].biography}</p>`;
         newString +=  `</div>`;
 
     }
@@ -141,43 +141,43 @@ songLoop();
 //Event Page Begin
 const tourPlaces = [
 {
-    imageURL: "Photo goes here",
-    locationName: "St. James Cheese Company",
-    address: "Warehouse District 641 Tchoupitoulas New Orleans",
-    date: "October 31st 2019",
-    time: "5:00pm - 10:00pm",
-    ticketPrice: "$100 up to $3,000",
-    description: "It's time for us to get rowdy ya'll. I hope you're ready to bring your favorite drinks and dairy products because this evening is all about good music, good food and the New Orleans Warehouse District. Come early and get a cheese plate along with some house wine. Parking for this event is all up to you. There are multiple places that you can go to depending on price range and availability. Also, this is New Orleans, so it's bound to get crrrazzzzy! Just be aware of your surroundings, your tolerances and of each other.",
-    websiteURL: "https://stjamescheese.com/"
+    cheeseImage: "../images/StJames.jpg",
+    locationName: "Location: St. James Cheese Company",
+    address: "Address: Warehouse District 641, Tchoupitoulas, New Orleans, United States",
+    date: "Date: October 31st 2019",
+    time: "Time: 5:00pm - 10:00pm",
+    ticketPrice: "Ticket Pricing: $100 up to $3,000",
+    albumPlaying: "Playing the albums: Bring the Cheese, Cows Go Moo and Treat Your Beats",
+    websiteURL: "https://www.stjamescheese.com/"
 },
 {
-    imageURL: "Photo goes here",
-    locationName: "St. Tola Goat Farm",
-    address: "Gortbofearna, Maurice Mills, Ennistymon, Co. Clare, Ireland V95 XA9C",
-    date: "November 13th 2019",
-    time: "4:30pm - 8:30pm",
-    ticketPrice: "$250 up to $3,000",
-    description: "MMmmm Irish Goat Cheese... Folk Rock Music... Fields of green... Sounds like a good combination, right? If you want to take a tour of this farm, go ahead and schedule one today. They take about an hour to an hour and a half, but you get to understand sustainable farming before WE TAKE OVER! Parking will be very specific so please follow the guidelines. These are personal fields so please be respectful when you park.",
-    websiteURL: "www.st-tola.ie"
+    cheeseImage: "../images/StTola.jpg",
+    locationName: "Location: St. Tola Goat Farm",
+    address: "Address: Gortbofearna, Maurice Mills, Ennistymon, Co. Clare, Ireland V95 XA9C",
+    date: "Date: November 13th 2019",
+    time: "Time: 4:30pm - 8:30pm",
+    ticketPrice: "Ticket Pricing: $250 up to $3,000",
+    albumPlaying: "Playing the album: Bring the Cheese and a few other original or improv songs",
+    websiteURL: "https://www.st-tola.ie"
 },
 {
-    imageURL: "Photo goes here",
-    locationName: "St. Andrews Cheese Company",
-    address: "Falside Farm Cottage, Pittenweem, Anstruther, Scotland KY10 2RT",
-    date: "November 29th 2019",
-    time: "5:15pm - 7:00pm",
-    ticketPrice: "$58.50 up to $409.35",
-    description: "Like coffee? Like cake? Like cheese? Like our rockin' music!? Then, yeah, this place is for you. Enjoy some delicous home cooking along with their award winning cheeses before coming to the stage. You can watch the cheese being made; milk from happy and healthy cows. Parking will be free at this event. However, you are parking in one of the fields that this company owns. Please be respectful when driving through it. We are also not responsible for any cow-pie incidents. ",
+    cheeseImage: "../images/StAndrews.jpg",
+    locationName: "Location Time: St. Andrews Cheese Company",
+    address: "Address: Falside Farm Cottage, Pittenweem, Anstruther, Scotland KY10 2RT",
+    date: "Date: November 29th 2019",
+    time: "Time: 5:15pm - 7:00pm",
+    ticketPrice: "Ticket Pricing: $58.50 up to $409.35",
+    albumPlaying: "Playing the album: Treat Your Beats and lucky audience members will join for random improv songs involving dairy product titles pulled from a hat",
     websiteURL: "https://www.standrewscheese.co.uk"
 },
 {
-    imageURL: "Photo goes here",
-    locationName: "Widmer's Cheese Cellars",
-    address: "214 W. Henni St., Theresa, WI 53091, United States",
-    date: "May 16th 2019",
-    time: "5:30pm - 9:00pm",
-    ticketPrice: "$260 up to $1,050",
-    description: "You're in for a real treat here at Widmer's Cheese Cellars. Plan on getting to the show before we begin! You'll be able to tour the Cheese Cellar, seeing first hand how the cheese is made in the factory store and viewing area. It opens at 7am and closes just in time for us to begin. Eat some good cheese and then come rock out! Parking will be a bit tricky because Theresa is a small town. There will be special parking available for concert and cheese goers. Follow the signs and volunteers will point you in the correct direction. Parking will be free.",  
+    cheeseImage: "../images/Widmer.jpg",
+    locationName: "Location: Widmer's Cheese Cellars",
+    address: "Address: 214 W. Henni Street, Theresa, Winsconsin, United States",
+    date: "Date: May 16th 2019",
+    time: "Time: 5:30pm - 9:00pm",
+    ticketPrice: "Ticket Pricing: $260 up to $1,050",
+    albumPlaying: "Playing the albums: Bring the Cheese and Treat Your Beats",
     websiteURL: "https://www.widmerscheese.com/factory-tour/" 
 }
 ];
@@ -186,15 +186,16 @@ const tourStringBuilder = () => {
   let newString = '';
   for (let i = 0; i < tourPlaces.length; i++){
       newString += `<div class = "tours">`;
-      newString += `<h5>${tourPlaces[i].imageURL}</h5>`;
-      newString += `<h5>${tourPlaces[i].locationName}</h5>`;
-      newString += `<h5>${tourPlaces[i].address}</h5>`;
-      newString += `<h5>${tourPlaces[i].date}</h5>`;
-      newString += `<h5>${tourPlaces[i].time}</h5>`;
-      newString += `<h5>${tourPlaces[i].ticketPrice}</h3>`;
-      newString += `<h5>${tourPlaces[i].description}</h5>`;
-      newString += `<h5>${tourPlaces[i].websiteURL}</h5>`;
+      newString += `<img src='${tourPlaces[i].cheeseImage}' width = '350px' height = '250px'></img>`;
+      newString += `<p>${tourPlaces[i].locationName}</p>`;
+      newString += `<p>${tourPlaces[i].address}</p>`;
+      newString += `<p>${tourPlaces[i].date}</p>`;
+      newString += `<p>${tourPlaces[i].time}</p>`;
+      newString += `<p>${tourPlaces[i].ticketPrice}</p>`;
+      newString += `<p>${tourPlaces[i].albumPlaying}</p>`;
+      newString += `<a href="${tourPlaces[i].websiteURL}" target="_blank">Click here to visit their webpage</a>`;
       newString += `</div>`;
+      newString += '<br>';
   }
   printToDom(newString, 'tourEvents');
 };
