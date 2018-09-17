@@ -193,7 +193,7 @@ const tourStringBuilder = () => {
       newString += `<p>${tourPlaces[i].time}</p>`;
       newString += `<p>${tourPlaces[i].ticketPrice}</p>`;
       newString += `<p>${tourPlaces[i].albumPlaying}</p>`;
-      newString += `<a href="https://${tourPlaces[i].websiteURL}" target="_blank">Click here to visit their webpage</a>`;
+      newString += `<a href="${tourPlaces[i].websiteURL}" target="_blank">Click here to visit their webpage</a>`;
       newString += `</div>`;
       newString += '<br>';
   }
@@ -225,14 +225,13 @@ let albumTitle = [
     albumDescription: "This Album was written by all band members. This album has the #1 Hit Song Treat Your Beats.",
     }
 ];
-
 const bandAlbums = (albumArray) => {
   let stringBuilder = '';
   for (i = 0; i < albumArray.length; i++) {
-  stringBuilder += `<h2>${albumArray[i].albumName}</h2>`;
   stringBuilder += `<div class='albumPage'>`; 
+  stringBuilder += `<h2>${albumArray[i].albumName}</h2>`;
   stringBuilder += `<img class= "albumImages" src= ${albumArray[i].image}><br>`;
-  stringBuilder += `<a href="link to song.html">Click here to listen to songs</a>`;
+  stringBuilder += `<a class= "links" href="../html/songs.html">Click here to listen to songs</a>`;
   stringBuilder += `<div class="rating">`;
   stringBuilder += ` <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>`;
   stringBuilder += `</div>`;
@@ -246,9 +245,7 @@ const bandAlbums = (albumArray) => {
   printToDom(stringBuilder, 'album_container');
 };
 bandAlbums(albumTitle);
-
 //Function for Alert//
-
 const alertConnect = () => {
     let firstName = document.getElementById('firstName').value
     let lastName = document.getElementById('lastName').value
