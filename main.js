@@ -224,7 +224,6 @@ let albumTitle = [
     albumDescription: "This Album was written by all band members. This album has the #1 Hit Song Treat Your Beats.",
     }
 ];
-
 const bandAlbums = (albumArray) => {
   let stringBuilder = '';
   for (i = 0; i < albumArray.length; i++) {
@@ -245,9 +244,7 @@ const bandAlbums = (albumArray) => {
   printToDom(stringBuilder, 'album_container');
 };
 bandAlbums(albumTitle);
-
 //Function for Alert//
-
 const alertConnect = () => {
     let firstName = document.getElementById('firstName').value
     let lastName = document.getElementById('lastName').value
