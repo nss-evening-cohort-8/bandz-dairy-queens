@@ -95,6 +95,7 @@ body {
 }
 
 /* Song Page End */
+/* Albume Page Begin*/
 
 #album_container {
     display: flex;
@@ -150,7 +151,6 @@ body {
     margin: auto;
     padding: 8px;
 }
-
 #tourEvents {
     display: flex;
     flex-wrap: wrap;
@@ -160,7 +160,6 @@ body {
     padding: auto;
     margin: auto;
 }
-
 .tours::after {
     content: '';
     position: absolute;
@@ -173,7 +172,6 @@ body {
     border-radius: 50%;
     z-index: 1;
 }
-
 .tours::before {
     content: " ";
     width: 0;
