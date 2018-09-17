@@ -36,6 +36,7 @@ localhost:9999
 ![tour page](images/TourPage.png)
 
 # Album Page
+![album page](images/albums.png)
 
 # Song Page
 ![song page](images/songPage.png)
